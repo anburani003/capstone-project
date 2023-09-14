@@ -1,1 +1,13 @@
+Github repo URL, 
+https://github.com/anburani003/capstone-project.git
 
+deployed site URL
+http://35.89.130.221/
+
+docker images name ,
+dev repo (public)
+anbuvanitha/dev:v02
+anbuvanitha/dev:v1.5
+prod repo (private)
+anbuvanitha/prod:v02
+anbuvanitha/prod:v1.5
