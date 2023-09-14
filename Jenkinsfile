@@ -87,25 +87,5 @@ pipeline {
             }
         }
     }
-}'
-                }
-            }
-        }
-
-        stage('Merge to Master') {
-            when {
-                changeset not empty: true, from: 'dev', to: 'master'
-            }
-            steps {
-                script {
-                    // Authenticate with Docker Hub using credentials
-                    sh 'docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD'
-
-                    // Build and push the Docker image to the prod repository on Docker Hub
-                    sh 'docker build -t anbuvanitha/prod:v02 .' // Replace with your Docker Hub username and prod repository name
-                    sh 'docker push anbuvanitha/prod:v02'
-                }
-            }
-        }
-    }
 }
+           
